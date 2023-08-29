@@ -1,3 +1,4 @@
+from django.contrib.auth import logout
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 
@@ -12,6 +13,7 @@ def index(request):
 def logout_view(request):
     response = redirect('/thank-you/')  # Redirect to thank you page
     response.set_cookie('logged_out', 'true', max_age=settings.LOG_OUT_COOKIE_DURATION)
+    logout(request)
     return response
 
 
