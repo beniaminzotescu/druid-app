@@ -1,0 +1,82 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Contact Page{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="texte">
+                <p>We are thrilled you want to reach out to us!</p>
+                <p>Below you'll find some basic contact info and a contact form if you wish to send us your best
+                    wishes.</p>
+                <p>Address: Str. Teting Esstraordinary -10A, Bucharest</p>
+                <p>Phone number: +30 1111.111.111</p>
+                <p>E-mail: contact@testin.inc</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="forms">
+                <form id="contact_form">
+                    <label for="fullname">Name:</label><br>
+                    <input type="text" id="fullname" name="fullname" maxlength="202" placeholder="John Doe"><br>
+                    <span class="charcount" id="char_count_name">0/200</span><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" maxlength="50" placeholder="someone@something.com"><br>
+                    <span class="charcount" id="char_count_email">0/50</span><br>
+                    <label for="phone">Phone:</label><br>
+                    <input type="text" id="phone" name="phone" maxlength="10" placeholder="0123456789"><br>
+                    <span class="charcount" id="char_count_phone">0/10</span><br><br>
+                    <div class="btn-field">
+                        <button type="button" value="Submit">Submit Form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="contactpic">
+                <div class="circle">
+                    <img src="{% static 'core/images/Contact_Pic.jpg' %}" class="img-fluid" alt="Contact Image">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function submitted() {
+        document.getElementById("contact_form").submit();
+    }
+
+</script>
+<script>
+    const countCharacters = (textArea, characterCounter, maxLimit) => {
+        let numOfEnteredChars = textArea.value.length;
+        let counter = numOfEnteredChars;
+        characterCounter.textContent = counter + "/" + maxLimit;
+
+        if (counter >= maxLimit) {
+            characterCounter.style.color = "red";
+        } else if (counter > maxLimit - 50) {
+            characterCounter.style.color = "orange";
+        } else {
+            characterCounter.style.color = "black";
+        }
+    };
+
+    const textArea_name = document.getElementById("fullname");
+    const characterCounter_name = document.getElementById("char_count_name");
+    textArea_name.addEventListener("input", () => countCharacters(textArea_name, characterCounter_name, 200));
+
+    const textArea_email = document.getElementById("email");
+    const characterCounter_email = document.getElementById("char_count_email");
+    textArea_email.addEventListener("input", () => countCharacters(textArea_email, characterCounter_email, 50));
+
+    const textArea_phone = document.getElementById("phone");
+    const characterCounter_phone = document.getElementById("char_count_phone");
+    textArea_phone.addEventListener("input", () => countCharacters(textArea_phone, characterCounter_phone, 10));
+
+</script>
+{% endblock %}

@@ -31,26 +31,36 @@
                         Acasă</a>
                 </li>
                 <li class="nav-item">
-                    <a class="btn" aria-current="page" href="#"><span
+                    <a class="btn" aria-current="page" href="{% url 'core:contact' %}"><span
                             class='fas fa-phone-alt'></span> Contact</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                        aria-expanded="false"><span class='fa-solid fa-gift'></span> Produse</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Enterprise</a>
+                        <li><a class="dropdown-item" href="{% url 'core:enterprise' %}">Enterprise</a>
                         </li>
-                        <li><a class="dropdown-item" href="#">Industrial</a></li>
+                        <li><a class="dropdown-item" href="{% url 'core:industrial' %}">Industrial</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                        aria-expanded="false"><span class='fa-solid fa-handshake'></span> Parteneri</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Platinum</a></li>
-                        <li><a class="dropdown-item" href="#">Gold</a></li>
-                        <li><a class="dropdown-item" href="#">Silver</a></li>
+                        <li><a class="dropdown-item" href="{% url 'core:platinum' %}">Platinum</a></li>
+                        <li><a class="dropdown-item" href="{% url 'core:gold' %}">Gold</a></li>
+                        <li><a class="dropdown-item" href="{% url 'core:silver' %}">Silver</a></li>
                     </ul>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="input-group">
+                    <input type="text" class="form-control" placeholder="What are you looking for?"
+                           aria-label="Search Term">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
                 </li>
             </ul>
             <ul class="navbar-nav">

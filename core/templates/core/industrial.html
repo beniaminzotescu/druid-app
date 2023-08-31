@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Test{% endblock %}
+
+{% block content %}
+<main class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="texte">
+                <p>Here at the fabulous Industrial Industrial, we have fabulous products for our Industrial customers.
+                    Just to
+                    brag, here's a few of our lovely Industrial customers: &lt;&lt;placeholder&gt;&gt;.</p>
+                <p>Impressed? Yeah, so are we.</p>
+                <p>For the low low price of $0.99 a month, you can also be part of this elite industrial group. For an
+                    extra
+                    $10, we'll put your name here :D</p>
+                <p>Happy Days!</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="image"
+                 style="background-image: linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)), url('images/license.png');">
+                <img src="{% static 'core/images/industrial.jpg' %}" class="img-fluid" alt="Industrial Image">
+            </div>
+            {% endblock %}

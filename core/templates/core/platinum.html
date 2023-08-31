@@ -1,0 +1,27 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Platinum Page{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="texte">
+                <p>Platinum is a chemical element with the symbol Pt and atomic number 77. It is a dense, malleable,
+                    ductile, highly unreactive, precious, silverish-white transition metal. Its name originates from
+                    Spanish platina, a diminutive of plata "silver".</p>
+                <p>Pure platinum is a lustrous, ductile, and malleable, silver-white metal. Platinum is more ductile
+                    than gold, silver or copper, thus being the most ductile of pure metals, but it is less malleable
+                    than gold.</p>
+                <p>Its physical characteristics and chemical stability make it useful for industrial applications. Its
+                    resistance to wear and tarnish is well suited to use in fine jewelry.</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="image">
+                <img src="{% static 'core/images/platinum.jpg' %}" class="img-fluid" alt="Platinum Image">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
