@@ -19,7 +19,7 @@ from pathlib import Path
 SECRET_KEY = 'django-insecure-h+9c9mbyrnbxxppi+o!zenzz39vmk25=55dszz7am*q%0)3+a8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -131,6 +131,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-SESSION_EXPIRE_SECONDS = 3600  # 60 minutes
+SESSION_EXPIRE_SECONDS = 500000  # 60 minutes
 LOG_OUT_COOKIE_DURATION = 9999999
 SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
