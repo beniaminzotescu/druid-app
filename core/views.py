@@ -3,6 +3,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from druid_app import settings
 from django.http import HttpResponse
+from .forms import ContactForm
+
 
 @login_required
 def index(request):
@@ -34,9 +36,26 @@ def silver(request):
     return render(request, 'core/silver.html')
 
 
-@login_required
 def contact(request):
-    return render(request, 'core/contact.html')
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # Get form data
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            phone = form.cleaned_data['phone']
+            message = form.cleaned_data['message']
+
+            # Compose email
+            subject = f"Contact Form Submission from {name}"
+            body = f"Name: {name}\nEmail: {email}\nPhone: {phone}\n\nMessage:\n{message}"
+
+            # Send email (You can add your email sending logic here)
+
+    else:
+        form = ContactForm()
+
+    return render(request, 'core/contact.html', {'form': form})
 
 
 def logout_view(request):
