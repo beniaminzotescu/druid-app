@@ -19,9 +19,9 @@ from pathlib import Path
 SECRET_KEY = 'django-insecure-h+9c9mbyrnbxxppi+o!zenzz39vmk25=55dszz7am*q%0)3+a8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['numeplaceholder-app.azurewebsites.net', '127.0.0.1']
 
 # Application definition
 
