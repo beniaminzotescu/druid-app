@@ -101,7 +101,7 @@ html, body, main {
 .contact-pic-container {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: -180px; /* Adjust the left margin as needed */
 }
 
 .contact-pic {
