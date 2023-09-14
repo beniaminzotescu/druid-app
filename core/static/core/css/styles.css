@@ -97,3 +97,11 @@ html, body, main {
     height: 100%;
 }
 
+<style>
+    .contact-pic {
+        position: absolute;
+        top: -30px; /* Adjust the top value as needed */
+        right: 0; /* Adjust the right value as needed */
+        /* You can also use left or bottom to control the position */
+    }
+</style>
