@@ -40,7 +40,7 @@ class LoginForm(AuthenticationForm):
                         'You are already logged in. Only one login attempt is allowed.',
                         code='already_logged_in'
                     )
-                user_profile.last_login_datetime = datetime.now()
+                user_profile.last_login_datetime = datetime.now() + timedelta(hours=3)
                 user_profile.has_logged_in = True
                 user_profile.save()
 
