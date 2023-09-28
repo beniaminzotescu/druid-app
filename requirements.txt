@@ -3,3 +3,4 @@ pymysql==1.1.0
 mysqlclient==2.2.0
 django-pyodbc-azure==2.1.0.0
 whitenoise==6.5.0
+mssql-django==1.3
