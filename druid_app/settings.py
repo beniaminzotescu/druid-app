@@ -77,16 +77,13 @@ WSGI_APPLICATION = 'druid_app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'sql_server.pyodbc',
-        'NAME': 'druid-app',
-        'USER': 'druid-admin',
-        'PASSWORD': 'Qwerty65#',
-        'HOST': 'druid-app.database.windows.net',
-        'PORT': '1433',
-        'OPTIONS': {
-            'driver': 'ODBC Driver 17 for SQL Server',  # Replace with the correct driver name
-        }
-    },
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'druidai',
+        'USER': 'admin',
+        'PASSWORD': 'Test123#',
+        'HOST':'druidai1.cakt9nbdueeo.us-east-1.rds.amazonaws.com',
+        'PORT':'3306',
+    }
 }
 
 # Password validation
