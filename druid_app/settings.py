@@ -77,17 +77,13 @@ WSGI_APPLICATION = 'druid_app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mssql',
-        'NAME': 'Druid_MangoExpressTest',
-        'USER': 'admin_mangoexpresstest',
-        'PASSWORD': 'hW4u3MT_YKAq0WAfejE2PWV8YGbuXM9p',
-        'HOST': 'druidpartners.druidqa.druidplatform.com',
-        'PORT': '1433',
-
-        'OPTIONS': {
-            'driver': 'ODBC Driver 17 for SQL Server',
-        },
-    },
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'druidai',
+        'USER': 'admin',
+        'PASSWORD': 'Test123#',
+        'HOST': 'druidai1.cakt9nbdueeo.us-east-1.rds.amazonaws.com',
+        'PORT': '3306',
+    }
 }
 
 # Password validation
