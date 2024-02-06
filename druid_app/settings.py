@@ -79,9 +79,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'druidai',
-        'USER': 'admin',
-        'PASSWORD': 'Test123#',
-        'HOST': 'druidai1.cakt9nbdueeo.us-east-1.rds.amazonaws.com',
+        'USER': 'beniaminzotescu',
+        'PASSWORD': 'Druid2023///#',
+        'HOST': 'testing-factory.mysql.database.azure.com',
         'PORT': '3306',
     }
 }
