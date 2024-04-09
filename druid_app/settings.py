@@ -33,6 +33,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'api',
+    'rest_framework'
 ]
 
 LOGIN_URL = '/login'
