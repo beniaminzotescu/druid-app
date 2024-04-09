@@ -33,4 +33,4 @@ class TestJsonAPIView(APIView):
             except TestData.DoesNotExist:
                 raise Http404("Data not found.")
         else:
-            return Response({"detail": "Specify a URL."}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"detail": "Specify a URL."})
